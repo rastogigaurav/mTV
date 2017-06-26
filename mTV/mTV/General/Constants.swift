@@ -1,0 +1,31 @@
+//
+//  Constants.swift
+//  mTV
+//
+//  Created by Gaurav Rastogi on 6/22/17.
+//  Copyright © 2017 Gaurav Rastogi. All rights reserved.
+//
+
+import UIKit
+
+let apiKey:String = "bbef065ad8676ba25e11a5daaa10a6aa"
+let baseUrl:String = "https://api.themoviedb.org"
+let imageBaseUrl:String = "https://image.tmdb.org/t/"
+
+let screenSize = UIScreen.main.bounds
+let screenWidth = screenSize.width
+let screenHeight = screenSize.height
+
+let aspectHeight = 225
+let aspectWidth = 150
+let expectedPosterWidthForCell = Int((screenWidth-35)/2)
+let expectedPosterHeightForCell = (aspectHeight * expectedPosterWidthForCell)/aspectWidth
+
+let maximumRowsInSectionOnHomePage = 6
+
+let years_1950_2017:[Int] = [1950,1951,1952,1952,1954,1955,1955,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017
+]
+
+let menuRevealWidth : CGFloat = (screenWidth*4)/5 //menu view will always cover 4/5th part of total screen
+
+let pageSize = 20

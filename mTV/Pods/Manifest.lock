@@ -1,0 +1,26 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
+  - Alamofire (4.5.0)
+  - MBProgressHUD (1.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.2)
+  - Alamofire (~> 4.5)
+  - MBProgressHUD (~> 1.0)
+  - SDWebImage (~> 4.0)
+  - SWRevealViewController (~> 2.3)
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+PODFILE CHECKSUM: 28b2357e5b3f5ef310dab04c7992ad3ad039048e
+
+COCOAPODS: 1.2.1
