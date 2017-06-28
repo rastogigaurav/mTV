@@ -10,6 +10,7 @@ import UIKit
 
 class MovieDetailCustomCell: UITableViewCell {
 
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var releaseYearLabel: UILabel!
@@ -17,19 +18,7 @@ class MovieDetailCustomCell: UITableViewCell {
     @IBOutlet weak var productionCompanyLabel: UILabel!
     @IBOutlet weak var movieOverviewLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     class var reuseIdentifier: String {
         return "MovieDetailCustomCell"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

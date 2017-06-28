@@ -10,8 +10,6 @@ import UIKit
 import SDWebImage
 
 class MovieDetailsViewController: UIViewController,UITableViewDataSource {
-    @IBOutlet weak var posterImageView: UIImageView!
-
     let repository:MovieDetailsRepository = MovieDetailsRepository()
     var displayMovieDetails:DisplayMovieDetails?
     var viewModel:MovieDetailsViewModel?
@@ -28,12 +26,6 @@ class MovieDetailsViewController: UIViewController,UITableViewDataSource {
         
         self.setupViewModel()
         self.viewModel?.fetchDetailAndPopulate(forMovieWith: self.movieId, reload:{[unowned self] _ in
-            if let posterImage = self.viewModel?.movie?.posterPathURL(){
-                self.posterImageView.sd_setImage(with: URL(string: posterImage), placeholderImage: UIImage(named: "movie-poster-default"))
-            }
-            else{
-                self.posterImageView.image = nil
-            }
             self.movieDetailsTableView.reloadData()
         })
     }
@@ -70,6 +62,13 @@ class MovieDetailsViewController: UIViewController,UITableViewDataSource {
     }
     
     func configure(cell:MovieDetailCustomCell, forRowAt indexPath:IndexPath){
+        if let posterImage = self.viewModel?.movie?.posterPathURL(){
+            cell.posterImageView.sd_setImage(with: URL(string: posterImage), placeholderImage: UIImage(named: "movie-poster-default"))
+        }
+        else{
+            cell.posterImageView.image = nil
+        }
+        
         if let movieTitle = self.viewModel?.movie?.title{
             cell.movieTitleLabel.text = movieTitle
         }
@@ -92,12 +91,6 @@ class MovieDetailsViewController: UIViewController,UITableViewDataSource {
         
         if let movieOverview = self.viewModel?.movie?.overview{
             cell.movieOverviewLabel.text = movieOverview
-        }
-    }
-    
-    func populateData(){
-        if let posterImage = self.viewModel?.movie?.posterPathURL(){
-            self.posterImageView.sd_setImage(with: URL(string: posterImage), placeholderImage: UIImage(named: "movie-poster-default"))
         }
     }
 }
