@@ -73,7 +73,7 @@ class DisplayMovies: NSObject,DisplayMoviesProtocol {
     }
     
     func filter(movieList list: [Movie], startYear sYear: Int, endYear eYear: Int, completionHandler: @escaping ([Movie]) -> Void) {
-        let filteredList = list.filter { ($0.releasedBetween(startYear: sYear, endYear: eYear))}
+        let filteredList = list.filter { ($0.releaseYear >= sYear && $0.releaseYear <= eYear)}
         completionHandler(filteredList)
     }
 }

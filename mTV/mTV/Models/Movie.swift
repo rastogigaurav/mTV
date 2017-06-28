@@ -171,9 +171,3 @@ class Movie:NSObject {
         return nil
     }
 }
-
-extension Movie{
-    func releasedBetween(startYear sYear:Int,endYear eYear:Int)->Bool{
-        return (releaseYear >= sYear && releaseYear <= eYear) ? true : false
-    }
-}
